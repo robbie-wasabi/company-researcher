@@ -1,13 +1,9 @@
-from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 from src.agent.graph import get_agent_graph
 import uvicorn
 
-load_dotenv()
-
 app = FastAPI(port=8000)
-
 
 class ResearchRequest(BaseModel):
     company: str
